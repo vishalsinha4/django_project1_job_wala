@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'authentication\css\style.css' %}">
+
+    <!-- unicon -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>Job Wala</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+          <a href="#" class="nav_logo">JOB WALA</a>
+  
+          <ul class="nav_items">
+            <li class="nav_item">
+              <a href="#" class="nav_link">Home</a>
+              <a href="#" class="nav_link">Job</a>
+              <a href="#" class="nav_link">Company</a>
+              <a href="#" class="nav_link">Services</a>
+            </li>
+          </ul>
+
+          {% if user.is_authenticated %}
+    <button type="submit" class=" button signout" ><a href="/signout">SignOut</a></button>
+
+    {% else %}
+    <button class="button" id="form-open">Login</button>
+    {% endif %}
+  
+          
+        </nav>
+      </header>
+
+
+
+
+    <section class="home">
+        <div class="form_container">
+          <i class="uil uil-times form_close"></i>
+
+          {% for message in messages %}
+          <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong>{{message}}
+            <!-- <button type="button" class="close" data-dismiss=""alert aria-label="close">  -->
+            <!-- <span aria-hiiden="true">&times;</span> </button>  -->
+          </div>
+      {% endfor %}
+
+          <!-- Login From -->
+          {% include 'authentication/signin.html' %}
+
+
+          {% include 'authentication/signup.html' %}
+
+    
+ 
+        </section>
+
+      
+
+    <h1>WELCOME TO JOB WALA</h1>
+
+    {% if user.is_authenticated %}
+    <h1> hello {{ fname }}</h1>
+    <h1>you're successfully login</h1>
+    {% endif %}
+  
+
+
+
+
+
+
+
+
+
+    <script src="{% static 'authentication/js/script.js' %}"></script>
+</body>
+</html>

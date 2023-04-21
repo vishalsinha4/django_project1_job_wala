@@ -1,0 +1,68 @@
+<div class="form signup_form">
+<form action="/signup" method="POST">
+      {% csrf_token %}
+    <h2>Signup</h2>
+    
+    <div class="input_box">
+     
+      <input type="text" id="username"  name="username" placeholder="Enter your username" required>
+      <i class="uil uil-user email"></i>
+
+    </div>
+
+    <div class="input_box">
+     
+      <input type="text" id="fname" name="fname" placeholder="Firstname" required>
+      <i class="uil uil-user email"></i>
+
+    </div>
+
+    <div class="input_box">
+     
+      <input type="text" id="lname" name="lname" placeholder="Lastname" required>
+      <i class="uil uil-user email"></i>
+
+    </div>
+
+    <div class="input_box">
+      <input type="email" id="email" name="email" placeholder="Email-address" required><br>
+      <i class="uil uil-envelope-alt email"></i>
+    </div>
+    <div class="input_box">
+     
+      <input type="text" id="workstatus"  name="workstatus" placeholder="Work Status" required>
+      <i class="uil uil-user email"></i>
+
+    </div>
+   
+
+
+    <div class="input_box">
+      <input type="password" id="pass1" name="pass1" placeholder="Password" required><br>
+      <i class="uil uil-lock password"></i>
+      <i class="uil uil-eye-slash pw_hide"></i>
+    </div>
+    <div class="input_box">
+      <input type="password" id="pass2" name="pass2" placeholder="Confirm-Password" required><br>
+      <i class="uil uil-lock password"></i>
+      <i class="uil uil-eye-slash pw_hide"></i>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button type="submit" class="button">Signup Now</button>
+
+    <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+  </form>
+</div>
+</div>
