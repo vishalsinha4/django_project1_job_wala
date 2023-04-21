@@ -5,7 +5,7 @@ Technologies
 Django framework ,html,css,Django Template Language,Python
 
 INSTALLATION
-git clone https://github.com/uishalcinha/django_Authentication_Email_Verification/tree/master
+git clone https://github.com/uishalcinha/job_wala.git
 
 
 SCREENSHOTS
