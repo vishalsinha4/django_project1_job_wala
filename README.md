@@ -10,7 +10,7 @@ This is a Django web application that includes email verification, authenticatio
 To get started with the project, you should first clone the repository:
 
 ```
-git clone https://github.com/username/django-email-auth-project.git
+git clone https://github.com/uishalcinha/django_project1_job_wala.git
 ```
 
 Next, create a virtual environment and install the required dependencies:
